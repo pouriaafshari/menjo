@@ -16,6 +16,7 @@ body
 {
     width: 100vw;
     height: 10vh;
+    position: sticky;
 }
 #header #logo{
     position: absolute;
@@ -26,10 +27,25 @@ body
 }
 .home-video-div
 {
+    position: relative;
     height: 100vh;
     overflow: hidden;
     background-color: black;
     text-align: center;
+}
+.home-video-div span
+{
+    color: white;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3em;
+}
+.home-video-div span small{
+    font-size: 0.8em;
 }
 .home-video-div video
 {
@@ -39,7 +55,7 @@ body
     left: 0;
     right: 0;
     opacity: 0.2;
-
+    transform: scale(300%);
     background-color: red;
 }
 .home-video-div button
@@ -54,7 +70,15 @@ body
     border-radius: .8em;
     z-index: 5;
     position: absolute;
-    transform: translate(-50%, 25%);
-    bottom: 0;
+    transform: translate(-50%, 0);
+    bottom: 15vh;
     left: 50%;
+
+    transition: 0.3s;
+}
+.home-video-div button:hover
+{
+    background-color: white;
+    color: black;
+    border-color: black;
 }
